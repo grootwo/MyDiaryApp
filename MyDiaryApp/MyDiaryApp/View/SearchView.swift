@@ -32,6 +32,5 @@ struct SearchView: View {
             .background(Color(.secondarySystemBackground))
             .cornerRadius(10.0)
         }
-        .padding(.horizontal)
     }
 }
