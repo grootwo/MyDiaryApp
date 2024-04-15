@@ -9,14 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State var selectedDay = Date()
+    @State var searchText = ""
     var body: some View {
         ZStack {
             DatePicker("", selection: $selectedDay, displayedComponents: [.date])
                 .datePickerStyle(.graphical)
             VStack {
-                HStack {
-                    TextField(/*@START_MENU_TOKEN@*/"Placeholder"/*@END_MENU_TOKEN@*/, text: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Value@*/.constant("")/*@END_MENU_TOKEN@*/)
-                }
+                SearchView(textInput: $searchText)
                 Spacer()
             }
             VStack {
