@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9B05AD682BCDF1710093CD34 /* MakeDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B05AD672BCDF1710093CD34 /* MakeDiaryView.swift */; };
 		9B57CAE82BCCD55C003F9D6A /* MyDiaryAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CAE72BCCD55C003F9D6A /* MyDiaryAppApp.swift */; };
 		9B57CAEA2BCCD55C003F9D6A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CAE92BCCD55C003F9D6A /* ContentView.swift */; };
 		9B57CAEC2BCCD55D003F9D6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9B57CAEB2BCCD55D003F9D6A /* Assets.xcassets */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9B05AD672BCDF1710093CD34 /* MakeDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MakeDiaryView.swift; sourceTree = "<group>"; };
 		9B57CAE42BCCD55C003F9D6A /* MyDiaryApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyDiaryApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B57CAE72BCCD55C003F9D6A /* MyDiaryAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyDiaryAppApp.swift; sourceTree = "<group>"; };
 		9B57CAE92BCCD55C003F9D6A /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -148,6 +150,7 @@
 			children = (
 				9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */,
 				9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */,
+				9B05AD672BCDF1710093CD34 /* MakeDiaryView.swift */,
 				9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */,
 				9B8122592BCD4E6400C24E15 /* FixedView.swift */,
 				9B81225E2BCD697C00C24E15 /* DiaryView.swift */,
@@ -302,6 +305,7 @@
 				9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */,
 				9B81225C2BCD5E7A00C24E15 /* DiaryModel.swift in Sources */,
 				9B57CAE82BCCD55C003F9D6A /* MyDiaryAppApp.swift in Sources */,
+				9B05AD682BCDF1710093CD34 /* MakeDiaryView.swift in Sources */,
 				9B57CB162BCCF5E6003F9D6A /* CalendarDiaryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
