@@ -9,7 +9,10 @@ import SwiftUI
 
 struct ListDiaryView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Text("Text List View")
+            FixedView(isCalendarView: false)
+        }
     }
 }
 
