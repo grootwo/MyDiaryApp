@@ -17,6 +17,7 @@
 		9B57CB122BCCDA87003F9D6A /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CB112BCCDA87003F9D6A /* SearchView.swift */; };
 		9B57CB142BCCF5D5003F9D6A /* ListDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */; };
 		9B57CB162BCCF5E6003F9D6A /* CalendarDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */; };
+		9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		9B57CB112BCCDA87003F9D6A /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
 		9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDiaryView.swift; sourceTree = "<group>"; };
 		9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDiaryView.swift; sourceTree = "<group>"; };
+		9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */,
+				9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */,
 				9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */,
 				9B57CB112BCCDA87003F9D6A /* SearchView.swift */,
 			);
@@ -274,6 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */,
 				9B57CAEA2BCCD55C003F9D6A /* ContentView.swift in Sources */,
 				9B57CB122BCCDA87003F9D6A /* SearchView.swift in Sources */,
 				9B57CB142BCCF5D5003F9D6A /* ListDiaryView.swift in Sources */,

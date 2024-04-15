@@ -17,18 +17,7 @@ struct CalendarDiaryView: View {
             VStack {
                 HStack {
                     SearchView(textInput: $searchText)
-                    HStack {
-                        Button(action: {
-                            print("calendar button clicked")
-                        }, label: {
-                            Image(systemName: "calendar")
-                        })
-                        Button(action: {
-                            print("list button clicked")
-                        }, label: {
-                            Image(systemName: "list.bullet")
-                        })
-                    }
+                    ViewToggle(isCalendarView: true)
                 }
                 Spacer()
                 HStack {
