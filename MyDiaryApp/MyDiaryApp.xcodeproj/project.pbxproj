@@ -19,6 +19,7 @@
 		9B57CB162BCCF5E6003F9D6A /* CalendarDiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */; };
 		9B81225A2BCD4E6400C24E15 /* FixedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8122592BCD4E6400C24E15 /* FixedView.swift */; };
 		9B81225C2BCD5E7A00C24E15 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81225B2BCD5E7A00C24E15 /* DiaryModel.swift */; };
+		9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81225E2BCD697C00C24E15 /* DiaryView.swift */; };
 		9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarDiaryView.swift; sourceTree = "<group>"; };
 		9B8122592BCD4E6400C24E15 /* FixedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FixedView.swift; sourceTree = "<group>"; };
 		9B81225B2BCD5E7A00C24E15 /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
+		9B81225E2BCD697C00C24E15 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToggle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -148,6 +150,7 @@
 				9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */,
 				9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */,
 				9B8122592BCD4E6400C24E15 /* FixedView.swift */,
+				9B81225E2BCD697C00C24E15 /* DiaryView.swift */,
 				9B57CB112BCCDA87003F9D6A /* SearchView.swift */,
 			);
 			path = View;
@@ -296,6 +299,7 @@
 				9B57CAEA2BCCD55C003F9D6A /* ContentView.swift in Sources */,
 				9B57CB122BCCDA87003F9D6A /* SearchView.swift in Sources */,
 				9B57CB142BCCF5D5003F9D6A /* ListDiaryView.swift in Sources */,
+				9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */,
 				9B81225C2BCD5E7A00C24E15 /* DiaryModel.swift in Sources */,
 				9B57CAE82BCCD55C003F9D6A /* MyDiaryAppApp.swift in Sources */,
 				9B57CB162BCCF5E6003F9D6A /* CalendarDiaryView.swift in Sources */,

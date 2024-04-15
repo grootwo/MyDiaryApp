@@ -10,7 +10,6 @@ import SwiftUI
 struct ViewToggle: View {
     var isCalendarView: Bool
     var body: some View {
-        //        NavigationStack {
         HStack {
             NavigationLink(destination: CalendarDiaryView()) {
                 Image(systemName: "calendar")
@@ -34,7 +33,6 @@ struct ViewToggle: View {
         .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
         .shadow(color: .black.opacity(0.1), radius: 5)
     }
-    //        }
 }
 
 #Preview {
