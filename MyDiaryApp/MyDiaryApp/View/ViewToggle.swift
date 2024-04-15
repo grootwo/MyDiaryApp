@@ -16,7 +16,7 @@ struct ViewToggle: View {
             }, label: {
                 Image(systemName: "calendar")
             })
-            .padding()
+            .padding(10)
             .background(isCalendarView ? .blue : .white)
             .foregroundColor(isCalendarView ? .white : .blue)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
@@ -25,12 +25,12 @@ struct ViewToggle: View {
             }, label: {
                 Image(systemName: "list.bullet")
             })
-            .padding()
+            .padding(10)
             .background(isCalendarView ? .white : .blue)
             .foregroundColor(isCalendarView ? .blue : .white)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
         }
-        .padding()
+        .padding(10)
         .background(.white)
         .clipShape(RoundedRectangle(cornerRadius: 20.0, style: .continuous))
         .shadow(color: .black.opacity(0.1), radius: 5)
@@ -38,5 +38,5 @@ struct ViewToggle: View {
 }
 
 #Preview {
-    ViewToggle(isCalendarView: false)
+    ViewToggle(isCalendarView: true)
 }
