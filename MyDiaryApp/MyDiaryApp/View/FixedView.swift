@@ -20,7 +20,7 @@ struct FixedView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        NavigationLink(destination: DiaryView()) {
+                        NavigationLink(destination: MakeDiaryView()) {
                             Image(systemName: "pencil.circle.fill")
                                 .resizable()
                                 .frame(width: 50, height: 50)
