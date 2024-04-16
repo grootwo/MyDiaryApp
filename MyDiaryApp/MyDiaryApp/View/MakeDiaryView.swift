@@ -47,7 +47,7 @@ struct MakeDiaryView: View {
                             print("new paragrah button clicked")
                             textList.append("")
                         }, label: {
-                            Image(systemName: "plus.circle.fill")
+                            Image(systemName: "plus.circle")
                                 .resizable()
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(.accent)

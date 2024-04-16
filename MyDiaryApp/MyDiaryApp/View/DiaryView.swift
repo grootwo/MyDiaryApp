@@ -28,14 +28,22 @@ struct DiaryView: View {
                 }
             }
             .padding()
-            VStack {
+            HStack {
                 Spacer()
-                HStack {
+                VStack(spacing: 20) {
                     Spacer()
                     Button(action: {
                         print("save new diary clicked")
                     }, label: {
-                        Image(systemName: "checkmark.circle.fill")
+                        Image(systemName: "trash.circle.fill")
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                            .foregroundColor(.accent)
+                    })
+                    Button(action: {
+                        print("save new diary clicked")
+                    }, label: {
+                        Image(systemName: "pencil.circle.fill")
                             .resizable()
                             .frame(width: 50, height: 50)
                             .foregroundColor(.accent)

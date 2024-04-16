@@ -23,7 +23,7 @@ struct FixedView: View {
                 Button(action: {
                     showMakeDiaryView = true
                 }, label: {
-                    Image(systemName: "pencil.circle.fill")
+                    Image(systemName: "plus.circle.fill")
                         .resizable()
                         .frame(width: 50, height: 50)
                         .foregroundColor(.accent)
