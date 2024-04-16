@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MakeDiaryView: View {
-//    @State var textList = ["", ""]
+    @State var textList = [""]
     var body: some View {
         ZStack {
             ScrollView {
@@ -22,18 +22,18 @@ struct MakeDiaryView: View {
                             Text("❔")
                         })
                     }
-//                    ForEach($textList, id: \.self) { $text in
-//                        CustomTextFieldView(text: $text)
-//                    }
                     Text("제목을 입력하세요")
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Divider()
-                    Text("내용을 입력하세요")
-                    Divider()
+                    ForEach($textList, id: \.self) { $text in
+                        CustomTextFieldView(text: $text)
+                        Divider()
+                    }
                     HStack {
                         Spacer()
                         Button(action: {
                             print("new paragrah button clicked")
+                            textList.append("")
                         }, label: {
                             Image(systemName: "plus.circle.fill")
                                 .resizable()
@@ -65,13 +65,13 @@ struct MakeDiaryView: View {
     }
 }
 
-//struct CustomTextFieldView: View {
-//    @Binding var text: String
-//    
-//    var body: some View {
-//        TextField("", text: $text)
-//    }
-//}
+struct CustomTextFieldView: View {
+    @Binding var text: String
+    
+    var body: some View {
+        TextField("내용을 입력하세요", text: $text)
+    }
+}
 
 #Preview {
     MakeDiaryView()
