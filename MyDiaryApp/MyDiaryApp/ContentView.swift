@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var isCalendarView = true
     var body: some View {
-        CalendarDiaryView()
+        ZStack {
+            FixedView(isCalendarView: $isCalendarView)
+            if isCalendarView {
+                CalendarDiaryView()
+            } else {
+                ListDiaryView()
+            }
+        }
     }
 }
 

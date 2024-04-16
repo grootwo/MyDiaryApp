@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct FixedView: View {
-    var isCalendarView: Bool
+    @Binding var isCalendarView: Bool
     @State var searchText = ""
     var body: some View {
         NavigationStack {
                 VStack {
                     HStack {
                         SearchView(textInput: $searchText)
-                        ViewToggle(isCalendarView: isCalendarView)
+                        ViewToggle(isCalendarView: $isCalendarView)
                     }
                     Spacer()
                     HStack {
@@ -35,5 +35,5 @@ struct FixedView: View {
 }
 
 #Preview {
-    FixedView(isCalendarView: false)
+    FixedView(isCalendarView: .constant(true))
 }

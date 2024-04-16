@@ -10,12 +10,9 @@ import SwiftUI
 struct CalendarDiaryView: View {
     @State var selectedDay = Date()
     var body: some View {
-        ZStack {
-            DatePicker("", selection: $selectedDay, displayedComponents: [.date])
-                .datePickerStyle(.graphical)
-                .padding()
-            FixedView(isCalendarView: true)
-        }
+        DatePicker("", selection: $selectedDay, displayedComponents: [.date])
+            .datePickerStyle(.graphical)
+            .padding()
     }
 }
 

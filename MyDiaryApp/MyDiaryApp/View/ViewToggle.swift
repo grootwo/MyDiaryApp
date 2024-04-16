@@ -8,20 +8,24 @@
 import SwiftUI
 
 struct ViewToggle: View {
-    var isCalendarView: Bool
+    @Binding var isCalendarView: Bool
     var body: some View {
         HStack {
-            NavigationLink(destination: CalendarDiaryView()) {
+            Button(action: {
+                isCalendarView = true
+            }, label: {
                 Image(systemName: "calendar")
-            }
+            })
             .padding(10)
             .background(isCalendarView ? .accent : .white)
             .foregroundColor(isCalendarView ? .white : .accent)
             .clipShape(Circle())
             .navigationBarBackButtonHidden(true)
-            NavigationLink(destination: ListDiaryView()) {
+            Button(action: {
+                isCalendarView = false
+            }, label: {
                 Image(systemName: "list.bullet")
-            }
+            })
             .padding(10)
             .background(isCalendarView ? .white : .accent)
             .foregroundColor(isCalendarView ? .accent : .white)
@@ -36,5 +40,5 @@ struct ViewToggle: View {
 }
 
 #Preview {
-    ViewToggle(isCalendarView: true)
+    ViewToggle(isCalendarView: .constant(true))
 }
