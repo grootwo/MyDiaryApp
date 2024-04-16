@@ -23,6 +23,7 @@
 		9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81225E2BCD697C00C24E15 /* DiaryView.swift */; };
 		9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */; };
 		9BEA6C632BCE16B300F19A15 /* MCEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */; };
+		9BEA6C662BCE21ED00F19A15 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9BEA6C652BCE21ED00F19A15 /* FSCalendar */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9BEA6C632BCE16B300F19A15 /* MCEmojiPicker in Frameworks */,
+				9BEA6C662BCE21ED00F19A15 /* FSCalendar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -197,6 +199,7 @@
 			name = MyDiaryApp;
 			packageProductDependencies = (
 				9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */,
+				9BEA6C652BCE21ED00F19A15 /* FSCalendar */,
 			);
 			productName = MyDiaryApp;
 			productReference = 9B57CAE42BCCD55C003F9D6A /* MyDiaryApp.app */;
@@ -272,6 +275,7 @@
 			mainGroup = 9B57CADB2BCCD55C003F9D6A;
 			packageReferences = (
 				9BEA6C5F2BCE15C100F19A15 /* XCRemoteSwiftPackageReference "MCEmojiPicker" */,
+				9BEA6C642BCE21E200F19A15 /* XCRemoteSwiftPackageReference "FSCalendar" */,
 			);
 			productRefGroup = 9B57CAE52BCCD55C003F9D6A /* Products */;
 			projectDirPath = "";
@@ -660,6 +664,14 @@
 				minimumVersion = 1.2.3;
 			};
 		};
+		9BEA6C642BCE21E200F19A15 /* XCRemoteSwiftPackageReference "FSCalendar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/WenchaoD/FSCalendar.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.8.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -667,6 +679,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 9BEA6C5F2BCE15C100F19A15 /* XCRemoteSwiftPackageReference "MCEmojiPicker" */;
 			productName = MCEmojiPicker;
+		};
+		9BEA6C652BCE21ED00F19A15 /* FSCalendar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BEA6C642BCE21E200F19A15 /* XCRemoteSwiftPackageReference "FSCalendar" */;
+			productName = FSCalendar;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
