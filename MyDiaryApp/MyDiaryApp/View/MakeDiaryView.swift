@@ -12,6 +12,7 @@ import MCEmojiPicker
 
 struct MakeDiaryView: View {
     @Binding var showMakeDiaryView: Bool
+    @State var date = Date()
     @State var title = ""
     @State var emoji = "❔"
     @State var showEmojiPicker = false
@@ -21,7 +22,8 @@ struct MakeDiaryView: View {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
-                        Text("2024년 4월 11일")
+                        DatePicker("날짜", selection: $date, displayedComponents: [.date])
+                            .labelsHidden()
                         Spacer()
                         Button(action: {
                             print("new emoji clicked")
