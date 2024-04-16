@@ -22,6 +22,7 @@
 		9B81225C2BCD5E7A00C24E15 /* DiaryModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81225B2BCD5E7A00C24E15 /* DiaryModel.swift */; };
 		9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B81225E2BCD697C00C24E15 /* DiaryView.swift */; };
 		9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */; };
+		9BEA6C632BCE16B300F19A15 /* MCEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9B81225B2BCD5E7A00C24E15 /* DiaryModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryModel.swift; sourceTree = "<group>"; };
 		9B81225E2BCD697C00C24E15 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToggle.swift; sourceTree = "<group>"; };
+		9BEA6C602BCE161D00F19A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9BEA6C632BCE16B300F19A15 /* MCEmojiPicker in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +97,7 @@
 				9B57CAF72BCCD55D003F9D6A /* MyDiaryAppTests */,
 				9B57CB012BCCD55D003F9D6A /* MyDiaryAppUITests */,
 				9B57CAE52BCCD55C003F9D6A /* Products */,
+				9BEA6C612BCE16B300F19A15 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +114,7 @@
 		9B57CAE62BCCD55C003F9D6A /* MyDiaryApp */ = {
 			isa = PBXGroup;
 			children = (
+				9BEA6C602BCE161D00F19A15 /* Info.plist */,
 				9B81225D2BCD5E8E00C24E15 /* Model */,
 				9B57CAE72BCCD55C003F9D6A /* MyDiaryAppApp.swift */,
 				9B57CAE92BCCD55C003F9D6A /* ContentView.swift */,
@@ -167,6 +172,13 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		9BEA6C612BCE16B300F19A15 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -183,6 +195,9 @@
 			dependencies = (
 			);
 			name = MyDiaryApp;
+			packageProductDependencies = (
+				9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */,
+			);
 			productName = MyDiaryApp;
 			productReference = 9B57CAE42BCCD55C003F9D6A /* MyDiaryApp.app */;
 			productType = "com.apple.product-type.application";
@@ -255,6 +270,9 @@
 				Base,
 			);
 			mainGroup = 9B57CADB2BCCD55C003F9D6A;
+			packageReferences = (
+				9BEA6C5F2BCE15C100F19A15 /* XCRemoteSwiftPackageReference "MCEmojiPicker" */,
+			);
 			productRefGroup = 9B57CAE52BCCD55C003F9D6A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -472,6 +490,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyDiaryApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDiaryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -500,6 +519,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"MyDiaryApp/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MyDiaryApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -630,6 +650,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9BEA6C5F2BCE15C100F19A15 /* XCRemoteSwiftPackageReference "MCEmojiPicker" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/izyumkin/MCEmojiPicker";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9BEA6C5F2BCE15C100F19A15 /* XCRemoteSwiftPackageReference "MCEmojiPicker" */;
+			productName = MCEmojiPicker;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9B57CADC2BCCD55C003F9D6A /* Project object */;
 }

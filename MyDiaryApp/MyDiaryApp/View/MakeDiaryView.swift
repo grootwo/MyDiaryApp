@@ -6,10 +6,15 @@
 //
 
 import SwiftUI
+import MCEmojiPicker
+
+
 
 struct MakeDiaryView: View {
     @Binding var showMakeDiaryView: Bool
     @State var title = ""
+    @State var emoji = "❔"
+    @State var showEmojiPicker = false
     @State var textList = [""]
     var body: some View {
         ZStack {
@@ -23,6 +28,7 @@ struct MakeDiaryView: View {
                         }, label: {
                             Text("❔")
                         })
+                        .emojiPicker(isPresented: $showEmojiPicker, selectedEmoji: $emoji)
                     }
                     TextField("제목을 입력하세요", text: $title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
