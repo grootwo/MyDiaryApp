@@ -32,6 +32,7 @@ struct MakeDiaryView: View {
                         })
                         .emojiPicker(isPresented: $showEmojiPicker, selectedEmoji: $emoji)
                     }
+                    .padding(.vertical, 20)
                     TextField("제목을 입력하세요", text: $title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Divider()
