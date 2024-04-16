@@ -13,7 +13,7 @@ struct ContentView: View {
         ZStack {
             FixedView(isCalendarView: $isCalendarView)
             if isCalendarView {
-                CalendarDiaryView()
+                CalendarView()
             } else {
                 ListDiaryView()
             }

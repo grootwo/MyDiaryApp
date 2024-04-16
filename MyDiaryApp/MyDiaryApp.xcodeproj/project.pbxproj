@@ -24,6 +24,7 @@
 		9BD4CBBF2BCD29AD00B5D945 /* ViewToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */; };
 		9BEA6C632BCE16B300F19A15 /* MCEmojiPicker in Frameworks */ = {isa = PBXBuildFile; productRef = 9BEA6C622BCE16B300F19A15 /* MCEmojiPicker */; };
 		9BEA6C662BCE21ED00F19A15 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 9BEA6C652BCE21ED00F19A15 /* FSCalendar */; };
+		9BEA6C6A2BCE26B200F19A15 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BEA6C692BCE26B200F19A15 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,7 @@
 		9B81225E2BCD697C00C24E15 /* DiaryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiaryView.swift; sourceTree = "<group>"; };
 		9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewToggle.swift; sourceTree = "<group>"; };
 		9BEA6C602BCE161D00F19A15 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		9BEA6C692BCE26B200F19A15 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 			isa = PBXGroup;
 			children = (
 				9B57CB152BCCF5E6003F9D6A /* CalendarDiaryView.swift */,
+				9BEA6C692BCE26B200F19A15 /* CalendarView.swift */,
 				9BD4CBBE2BCD29AD00B5D945 /* ViewToggle.swift */,
 				9B05AD672BCDF1710093CD34 /* MakeDiaryView.swift */,
 				9B57CB132BCCF5D5003F9D6A /* ListDiaryView.swift */,
@@ -325,6 +328,7 @@
 				9B57CB122BCCDA87003F9D6A /* SearchView.swift in Sources */,
 				9B57CB142BCCF5D5003F9D6A /* ListDiaryView.swift in Sources */,
 				9B81225F2BCD697C00C24E15 /* DiaryView.swift in Sources */,
+				9BEA6C6A2BCE26B200F19A15 /* CalendarView.swift in Sources */,
 				9B81225C2BCD5E7A00C24E15 /* DiaryModel.swift in Sources */,
 				9B57CAE82BCCD55C003F9D6A /* MyDiaryAppApp.swift in Sources */,
 				9B05AD682BCDF1710093CD34 /* MakeDiaryView.swift in Sources */,
