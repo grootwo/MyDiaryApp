@@ -9,7 +9,6 @@ import SwiftUI
 import MCEmojiPicker
 
 
-
 struct MakeDiaryView: View {
     @Binding var showMakeDiaryView: Bool
     @State var date = Date()
@@ -27,8 +26,10 @@ struct MakeDiaryView: View {
                         Spacer()
                         Button(action: {
                             print("new emoji clicked")
+                            showEmojiPicker = true
                         }, label: {
-                            Text("❔")
+                            Text(emoji)
+                                .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                         })
                         .emojiPicker(isPresented: $showEmojiPicker, selectedEmoji: $emoji)
                     }
