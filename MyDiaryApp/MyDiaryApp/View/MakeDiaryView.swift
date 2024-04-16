@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MakeDiaryView: View {
+    @State var title = ""
     @State var textList = [""]
     var body: some View {
         ZStack {
@@ -22,7 +23,7 @@ struct MakeDiaryView: View {
                             Text("❔")
                         })
                     }
-                    Text("제목을 입력하세요")
+                    TextField("제목을 입력하세요", text: $title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Divider()
                     ForEach($textList, id: \.self) { $text in
