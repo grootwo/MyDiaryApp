@@ -12,6 +12,7 @@ struct ViewToggle: View {
     var body: some View {
         HStack {
             Button(action: {
+                print("calendar view clicked")
                 isCalendarView = true
             }, label: {
                 Image(systemName: "calendar")
@@ -22,6 +23,7 @@ struct ViewToggle: View {
             .clipShape(Circle())
             .navigationBarBackButtonHidden(true)
             Button(action: {
+                print("list view clicked")
                 isCalendarView = false
             }, label: {
                 Image(systemName: "list.bullet")
