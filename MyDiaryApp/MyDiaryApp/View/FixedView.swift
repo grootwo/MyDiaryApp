@@ -24,7 +24,7 @@ struct FixedView: View {
                             Image(systemName: "pencil.circle.fill")
                                 .resizable()
                                 .frame(width: 50, height: 50)
-                                .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+                                .foregroundColor(.accent)
                         }
                         .navigationBarBackButtonHidden(true)
                     }

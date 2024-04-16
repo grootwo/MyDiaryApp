@@ -15,16 +15,16 @@ struct ViewToggle: View {
                 Image(systemName: "calendar")
             }
             .padding(10)
-            .background(isCalendarView ? .blue : .white)
-            .foregroundColor(isCalendarView ? .white : .blue)
+            .background(isCalendarView ? .accent : .white)
+            .foregroundColor(isCalendarView ? .white : .accent)
             .clipShape(Circle())
             .navigationBarBackButtonHidden(true)
             NavigationLink(destination: ListDiaryView()) {
                 Image(systemName: "list.bullet")
             }
             .padding(10)
-            .background(isCalendarView ? .white : .blue)
-            .foregroundColor(isCalendarView ? .blue : .white)
+            .background(isCalendarView ? .white : .accent)
+            .foregroundColor(isCalendarView ? .accent : .white)
             .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
             .navigationBarBackButtonHidden(true)
         }
