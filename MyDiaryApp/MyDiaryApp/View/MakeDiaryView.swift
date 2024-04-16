@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct MakeDiaryView: View {
+    @Binding var showMakeDiaryView: Bool
     @State var title = ""
     @State var textList = [""]
     var body: some View {
@@ -53,6 +54,7 @@ struct MakeDiaryView: View {
                     Spacer()
                     Button(action: {
                         print("save new diary clicked")
+                        showMakeDiaryView = false
                     }, label: {
                         Image(systemName: "checkmark.circle.fill")
                             .resizable()
@@ -75,5 +77,5 @@ struct CustomTextFieldView: View {
 }
 
 #Preview {
-    MakeDiaryView()
+    MakeDiaryView(showMakeDiaryView: .constant(true))
 }

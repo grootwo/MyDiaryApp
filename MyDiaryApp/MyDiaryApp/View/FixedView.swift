@@ -10,6 +10,7 @@ import SwiftUI
 struct FixedView: View {
     @Binding var isCalendarView: Bool
     @State var searchText = ""
+    @State var showMakeDiaryView = false
     var body: some View {
         NavigationStack {
                 VStack {
@@ -20,14 +21,18 @@ struct FixedView: View {
                     Spacer()
                     HStack {
                         Spacer()
-                        NavigationLink(destination: MakeDiaryView()) {
+                        Button(action: {
+                            showMakeDiaryView = true
+                        }, label: {
                             Image(systemName: "pencil.circle.fill")
                                 .resizable()
                                 .frame(width: 50, height: 50)
                                 .foregroundColor(.accent)
-                        }
-                        .navigationBarBackButtonHidden(true)
+                        })
                     }
+                    .sheet(isPresented: $showMakeDiaryView, content: {
+                        MakeDiaryView(showMakeDiaryView: $showMakeDiaryView)
+                    })
                 }
                 .padding()
         }
