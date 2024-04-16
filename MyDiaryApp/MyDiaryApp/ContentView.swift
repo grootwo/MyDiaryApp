@@ -13,7 +13,7 @@ struct ContentView: View {
         NavigationStack {
             ZStack {
                 if isCalendarView {
-                    CalendarView()
+                    CalendarDiaryView()
                 } else {
                     ListDiaryView()
                 }
