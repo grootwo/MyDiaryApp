@@ -33,7 +33,7 @@ struct DiaryView: View {
                 VStack(spacing: 20) {
                     Spacer()
                     Button(action: {
-                        print("save new diary clicked")
+                        print("delete diary clicked")
                     }, label: {
                         Image(systemName: "trash.circle.fill")
                             .resizable()
@@ -41,7 +41,7 @@ struct DiaryView: View {
                             .foregroundColor(.accent)
                     })
                     Button(action: {
-                        print("save new diary clicked")
+                        print("edit diary clicked")
                     }, label: {
                         Image(systemName: "pencil.circle.fill")
                             .resizable()
