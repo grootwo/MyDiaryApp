@@ -74,6 +74,7 @@ struct ListDiaryView: View {
                     .padding(.vertical, 10)
 
                 }
+                .padding(.top, 60)
             }
             .padding()
             FixedView(isCalendarView: false)
