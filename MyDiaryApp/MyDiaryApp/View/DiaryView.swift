@@ -22,7 +22,7 @@ struct DiaryView: View {
                     Text(diary.title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     Divider()
-                    Grid(alignment: .leading, verticalSpacing: 20) {
+                    VStack(alignment: .leading, spacing: 20) {
                         ForEach(diary.paragraph, id: \.self) { p in
                             Text(p)
                             Divider()
