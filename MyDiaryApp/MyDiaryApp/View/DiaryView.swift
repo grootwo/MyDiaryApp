@@ -17,6 +17,7 @@ struct DiaryView: View {
                         Text(diary.date.formatted(date: .complete, time: .omitted))
                         Spacer()
                         Text(diary.emoji)
+                            .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
                     }
                     Text(diary.title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
