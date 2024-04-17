@@ -10,6 +10,7 @@ import MCEmojiPicker
 
 
 struct MakeDiaryView: View {
+    @Binding var diaries: [Diary]
     @Binding var showMakeDiaryView: Bool
     @State var date = Date()
     @State var title = ""
@@ -64,6 +65,8 @@ struct MakeDiaryView: View {
                     Spacer()
                     Button(action: {
                         print("save new diary clicked")
+                        diaries.append(Diary(date: date, title: title, emoji: emoji, paragraph: textList))
+                        print(diaries)
                         showMakeDiaryView = false
                     }, label: {
                         Image(systemName: "checkmark.circle.fill")
@@ -87,5 +90,9 @@ struct CustomTextFieldView: View {
 }
 
 #Preview {
-    MakeDiaryView(showMakeDiaryView: .constant(true))
+    MakeDiaryView(diaries: .constant([
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/16")!, title: "건.뜨.", emoji: "🧶", paragraph: ["매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지...", "매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지..."]),
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/09")!, title: "수영장", emoji: "🌊", paragraph: ["매일 수영을 하고 싶다. 내일도 수영 해야지. 매일 수영을 하고 싶다. 내일도 수영 해야지. 매일 수영을 하고 싶다. 내일도 수영 해야지..."]),
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/01")!, title: "유도 강도", emoji: "🥋", paragraph: ["매일 유도를 하고 싶다. 내일도 유도 해야지. 매일 유도를 하고 싶다. 내일도 유도 해야지. 매일 유도를 하고 싶다. 내일도 유도 해야지..."]),
+    ]), showMakeDiaryView: .constant(true))
 }

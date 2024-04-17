@@ -9,13 +9,14 @@ import SwiftUI
 
 struct DiaryView: View {
     @State var showEditDiaryView = false
-    var diary: Diary
+    @Binding var diary: Diary
     var body: some View {
         ZStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
                     HStack {
                         Text(diary.date.formatted(date: .complete, time: .omitted))
+                        Text("\(diary.date, formatter: ContentView.dateFormat)")
                         Spacer()
                         Text(diary.emoji)
                             .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
@@ -57,7 +58,7 @@ struct DiaryView: View {
             }
             .padding()
             .sheet(isPresented: $showEditDiaryView, content: {
-                EditDiaryView(showEditDiaryView: $showEditDiaryView, diary: diary, date: diary.date, title: diary.title, emoji: diary.emoji, textList: diary.paragraph)
+                EditDiaryView(showEditDiaryView: $showEditDiaryView, diary: $diary, date: diary.date, title: diary.title, emoji: diary.emoji, textList: diary.paragraph)
             })
         }
         .padding()
@@ -66,5 +67,5 @@ struct DiaryView: View {
 
 
 #Preview {
-    DiaryView(diary: Diary(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"]))
+    DiaryView(diary: .constant(Diary(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"])))
 }

@@ -18,7 +18,7 @@ import MCEmojiPicker
 
 struct EditDiaryView: View {
     @Binding var showEditDiaryView: Bool
-    @State var diary: Diary
+    @Binding var diary: Diary
     @State var date: Date
     @State var title: String
     @State var emoji: String
@@ -70,7 +70,10 @@ struct EditDiaryView: View {
                 HStack {
                     Spacer()
                     Button(action: {
-                        print("save new diary clicked")
+                        print("save edited diary clicked")
+                        diary.date = date
+                        diary.emoji = emoji
+                        diary.paragraph = textList
                         showEditDiaryView = false
                     }, label: {
                         Image(systemName: "checkmark.circle.fill")
@@ -86,5 +89,6 @@ struct EditDiaryView: View {
 }
 
 #Preview {
-    EditDiaryView(showEditDiaryView: .constant(true), diary: diaries[0], date: Date(), title: "Title", emoji: "🤨", textList: ["paragraph 1", "paragraph 2"])
+    EditDiaryView(showEditDiaryView: .constant(true), diary: .constant(
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/16")!, title: "건.뜨.", emoji: "🧶", paragraph: ["매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지...", "매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지..."])), date: Date(), title: "Title", emoji: "🤨", textList: ["paragraph 1", "paragraph 2"])
 }
