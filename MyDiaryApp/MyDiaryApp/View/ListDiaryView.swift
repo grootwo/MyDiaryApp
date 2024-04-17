@@ -10,8 +10,8 @@ import SwiftUI
 struct ListDiaryView: View {
     var body: some View {
         ScrollView {
-            VStack {
-                ForEach(diaries, id: \.id) { diary in
+            ForEach(diaries, id: \.id) { diary in
+                NavigationLink(destination: DiaryView(diary: diary)) {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(diary.title)
@@ -24,10 +24,12 @@ struct ListDiaryView: View {
                         }
                         .padding(.bottom, 10)
                         Text(diary.paragraph[0])
+                            .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         Divider()
                     }
                     .padding(.vertical, 10)
                 }
+                .foregroundColor(.black)
             }
             .padding(.top, 60)
         }
