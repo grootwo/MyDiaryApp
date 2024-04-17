@@ -17,13 +17,13 @@ import MCEmojiPicker
 
 
 struct EditDiaryView: View {
-    @Binding var showMakeDiaryView: Bool
+    @Binding var showEditDiaryView: Bool
     @State var diary: Diary
-    @State var date = Date()
-    @State var title = diary.title
-    @State var emoji = "❔"
+    @State var date: Date
+    @State var title: String
+    @State var emoji: String
     @State var showEmojiPicker = false
-    @State var textList = [""]
+    @State var textList: [String]
     var body: some View {
         ZStack {
             ScrollView {
@@ -71,7 +71,7 @@ struct EditDiaryView: View {
                     Spacer()
                     Button(action: {
                         print("save new diary clicked")
-                        showMakeDiaryView = false
+                        showEditDiaryView = false
                     }, label: {
                         Image(systemName: "checkmark.circle.fill")
                             .resizable()
@@ -86,5 +86,5 @@ struct EditDiaryView: View {
 }
 
 #Preview {
-    EditDiaryView(showMakeDiaryView: .constant(true), diary: diaries[0])
+    EditDiaryView(showEditDiaryView: .constant(true), diary: diaries[0], date: Date(), title: "Title", emoji: "🤨", textList: ["paragraph 1", "paragraph 2"])
 }

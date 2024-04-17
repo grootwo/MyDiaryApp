@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DiaryView: View {
+    @State var showEditDiaryView = false
     var diary: Diary
     var body: some View {
         ZStack {
@@ -45,6 +46,7 @@ struct DiaryView: View {
                     })
                     Button(action: {
                         print("edit diary clicked")
+                        showEditDiaryView = true
                     }, label: {
                         Image(systemName: "pencil.circle.fill")
                             .resizable()
@@ -54,6 +56,9 @@ struct DiaryView: View {
                 }
             }
             .padding()
+            .sheet(isPresented: $showEditDiaryView, content: {
+                EditDiaryView(showEditDiaryView: $showEditDiaryView, diary: diary, date: diary.date, title: diary.title, emoji: diary.emoji, textList: diary.paragraph)
+            })
         }
         .padding()
     }
