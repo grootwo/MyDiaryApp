@@ -26,8 +26,8 @@ struct ListDiaryView: View {
                         Text(diary.paragraph[0])
                             .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         Divider()
+                            .padding(.vertical, 10)
                     }
-                    .padding(.vertical, 10)
                 }
                 .foregroundColor(.black)
             }
