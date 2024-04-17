@@ -15,6 +15,7 @@ struct CalendarDiaryView: View {
         VStack {
             // Passing the selectedDate as Binding
             CalendarViewRepresentable(selectedDate: $selectedDate)
+                .padding(.vertical, 100)
         }
     }
 }
@@ -34,7 +35,12 @@ struct CalendarViewRepresentable: UIViewRepresentable {
         calendar.appearance.selectionColor = .accent // 선택된 날짜 원
         calendar.appearance.titleWeekendColor = .accent // 주말 날짜 폰트 색
         calendar.appearance.titleTodayColor = .white // 오늘 날짜 폰트 색
-        calendar.appearance.titleFont = .boldSystemFont(ofSize: 15)
+        calendar.appearance.titleFont = .boldSystemFont(ofSize: 15) // 날짜 폰트 크기
+        calendar.appearance.headerTitleFont = .systemFont(
+                                                ofSize: 30,
+                                                weight: .black)
+        calendar.appearance.headerTitleColor = .black // 월 폰트 색
+        calendar.scrollDirection = .vertical
         // returning the intialized calendar
         return calendar
     }
