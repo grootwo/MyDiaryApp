@@ -82,7 +82,7 @@ struct CustomTextFieldView: View {
     @Binding var text: String
     
     var body: some View {
-        TextField("내용을 입력하세요", text: $text)
+        TextField("내용을 입력하세요", text: $text, axis: .vertical)
     }
 }
 
