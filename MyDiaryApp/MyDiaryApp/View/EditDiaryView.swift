@@ -72,6 +72,7 @@ struct EditDiaryView: View {
                     Button(action: {
                         print("save edited diary clicked")
                         diary.date = date
+                        diary.title = title
                         diary.emoji = emoji
                         diary.paragraph = textList
                         showEditDiaryView = false
