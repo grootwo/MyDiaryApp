@@ -38,7 +38,7 @@ struct CalendarViewRepresentable: UIViewRepresentable {
         calendar.appearance.titleFont = .boldSystemFont(ofSize: 15) // 날짜 폰트 크기
         calendar.appearance.headerTitleFont = .systemFont(
                                                 ofSize: 30,
-                                                weight: .black)
+                                                weight: .regular)
         calendar.appearance.headerTitleColor = .black // 월 폰트 색
         calendar.scrollDirection = .vertical
         // returning the intialized calendar
@@ -65,7 +65,7 @@ struct CalendarViewRepresentable: UIViewRepresentable {
         func calendar(_ calendar: FSCalendar,
                       didSelect date: Date,
                       at monthPosition: FSCalendarMonthPosition) {
-            parent.selectedDate = date
+            parent.selectedDate = date // selectedDate 설정
         }
     }
 }
