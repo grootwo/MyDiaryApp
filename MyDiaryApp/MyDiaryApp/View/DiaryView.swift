@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DiaryView: View {
-    var diary: DiaryModel
+    var diary: Diary
     var body: some View {
         ZStack {
             ScrollView {
@@ -60,5 +60,5 @@ struct DiaryView: View {
 
 
 #Preview {
-    DiaryView(diary: DiaryModel(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"]))
+    DiaryView(diary: Diary(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"]))
 }
