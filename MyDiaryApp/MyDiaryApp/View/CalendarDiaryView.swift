@@ -29,6 +29,12 @@ struct CalendarViewRepresentable: UIViewRepresentable {
         // values we get from Coordinator
         calendar.delegate = context.coordinator
         calendar.dataSource = context.coordinator
+        // Added the below code to change calendar appearance
+        calendar.appearance.todayColor = .accent // 오늘 날짜 원
+        calendar.appearance.selectionColor = .accent // 선택된 날짜 원
+        calendar.appearance.titleWeekendColor = .accent // 주말 날짜 폰트 색
+        calendar.appearance.titleTodayColor = .white // 오늘 날짜 폰트 색
+        calendar.appearance.titleFont = .boldSystemFont(ofSize: 15)
         // returning the intialized calendar
         return calendar
     }
