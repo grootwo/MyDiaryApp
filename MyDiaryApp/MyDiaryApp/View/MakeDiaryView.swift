@@ -14,7 +14,7 @@ struct MakeDiaryView: View {
     @Binding var showMakeDiaryView: Bool
     @State var date = Date()
     @State var title = ""
-    @State var emoji = "❔"
+    @State var emoji = "😶"
     @State var showEmojiPicker = false
     @State var textList = [""]
     var body: some View {
@@ -37,6 +37,7 @@ struct MakeDiaryView: View {
                     .padding(.vertical, 20)
                     TextField("제목을 입력하세요", text: $title)
                         .font(/*@START_MENU_TOKEN@*/.title/*@END_MENU_TOKEN@*/)
+                        .fontWeight(.semibold)
                     Divider()
                     ForEach($textList, id: \.self) { $text in
                         CustomTextFieldView(text: $text)
@@ -50,8 +51,8 @@ struct MakeDiaryView: View {
                         }, label: {
                             Image(systemName: "plus.circle")
                                 .resizable()
-                                .frame(width: 50, height: 50)
-                                .foregroundColor(.accent)
+                                .frame(width: 30, height: 30)
+                                .foregroundColor(.gray)
                         })
                         Spacer()
                     }
