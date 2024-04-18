@@ -24,7 +24,9 @@ struct ContentView: View {
             ZStack {
                 VStack {
                     HStack {
+                        Spacer()
                         ViewToggle(isCalendarView: $isCalendarView)
+                            .padding(.horizontal, 20)
                     }
                     if isCalendarView {
                         CalendarDiaryView()
