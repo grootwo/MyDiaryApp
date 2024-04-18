@@ -22,12 +22,17 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                if isCalendarView {
-                    CalendarDiaryView()
-                } else {
-                    ListDiaryView(diaries: $diaries)
+                VStack {
+                    HStack {
+                        ViewToggle(isCalendarView: $isCalendarView)
+                    }
+                    if isCalendarView {
+                        CalendarDiaryView()
+                    } else {
+                        ListDiaryView(diaries: $diaries)
+                    }
                 }
-                FixedView(diaries: $diaries, isCalendarView: $isCalendarView)
+                FixedView(diaries: $diaries)
             }
         }
         
