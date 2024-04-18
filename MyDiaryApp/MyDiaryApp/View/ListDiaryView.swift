@@ -31,7 +31,7 @@ struct ListDiaryView: View {
                                 .font(.subheadline)
                         }
                         .padding(.bottom, 5)
-                        if diary.paragraph[0].count > 30 {
+                        if diary.paragraph[0].count > 80 {
                             Text("\(diary.paragraph[0].prefix(80))···")
                                 .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         } else {
