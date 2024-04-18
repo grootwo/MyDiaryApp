@@ -9,6 +9,7 @@ import SwiftUI
 
 struct DiaryView: View {
     @State var showEditDiaryView = false
+    @State var showAlert = false
     @Binding var diary: Diary
     var body: some View {
         ZStack {
@@ -39,6 +40,7 @@ struct DiaryView: View {
                     Spacer()
                     Button(action: {
                         print("delete diary clicked")
+                        showAlert = true
                     }, label: {
                         Image(systemName: "trash.circle.fill")
                             .resizable()
@@ -60,6 +62,19 @@ struct DiaryView: View {
             .sheet(isPresented: $showEditDiaryView, content: {
                 EditDiaryView(showEditDiaryView: $showEditDiaryView, diary: $diary, date: diary.date, title: diary.title, emoji: diary.emoji, textList: diary.paragraph)
             })
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("일기 삭제"), message: Text("이 일기를 삭제할까요?"), primaryButton: .default(
+                    Text("취소"),
+                    action: {
+                        print("cancel deleting diary")
+                    }
+                ), secondaryButton: .destructive(
+                    Text("삭제"),
+                    action: {
+                        print("delete diary")
+                    }
+                ))
+            }
         }
         .padding()
     }
