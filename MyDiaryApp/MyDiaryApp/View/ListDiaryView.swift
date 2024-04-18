@@ -17,13 +17,14 @@ struct ListDiaryView: View {
                         HStack {
                             Text(diary.title)
                                 .font(.title2)
+                                .fontWeight(.semibold)
                             Spacer()
                             Text(diary.date.formatted(date: .complete, time: .omitted))
                                 .font(.subheadline)
                             Text(diary.emoji)
                                 .font(.subheadline)
                         }
-                        .padding(.bottom, 10)
+                        .padding(.bottom, 5)
                         if diary.paragraph[0].count > 30 {
                             Text("\(diary.paragraph[0].prefix(80))···")
                                 .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
@@ -32,7 +33,7 @@ struct ListDiaryView: View {
                                 .multilineTextAlignment(/*@START_MENU_TOKEN@*/.leading/*@END_MENU_TOKEN@*/)
                         }
                         Divider()
-                            .padding(.vertical, 10)
+                            .padding(.vertical, 15)
                     }
                 }
                 .foregroundColor(.black)
