@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct DiaryView: View {
+    @Environment(\.dismiss) var dismiss
+    
     @State var showEditDiaryView = false
     @State var showAlert = false
     @Binding var diaries: [Diary]
@@ -74,6 +76,7 @@ struct DiaryView: View {
                     action: {
                         print("delete diary")
                         diaries.remove(at: diaries.firstIndex(of: diary)!)
+                        dismiss()
                     }
                 ))
             }
