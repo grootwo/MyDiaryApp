@@ -10,6 +10,7 @@ import SwiftUI
 struct DiaryView: View {
     @State var showEditDiaryView = false
     @State var showAlert = false
+    @Binding var diaries: [Diary]
     @Binding var diary: Diary
     var body: some View {
         ZStack {
@@ -72,6 +73,7 @@ struct DiaryView: View {
                     Text("삭제"),
                     action: {
                         print("delete diary")
+                        diaries.remove(at: diaries.firstIndex(of: diary)!)
                     }
                 ))
             }
@@ -82,5 +84,9 @@ struct DiaryView: View {
 
 
 #Preview {
-    DiaryView(diary: .constant(Diary(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"])))
+    DiaryView(diaries: .constant([
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/16")!, title: "건.뜨.", emoji: "🧶", paragraph: ["매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지...", "매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지. 매일 뜨개질을 하고 싶다. 내일도 뜨개질 해야지."]),
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/09")!, title: "수영장", emoji: "🌊", paragraph: ["매일 수영을 하고 싶다. 내일도 수영 해야지. 매일 수영을 하고 싶다. 내일도 수영 해야지. 매일 수영을 하고 싶다. 내일도 수영 해야지."]),
+        Diary(date: ContentView.dateFormat.date(from: "2024/04/01")!, title: "유도 강도", emoji: "🥋", paragraph: ["매일 유도를 하고 싶다. 내일도 유도 해야지. 매일 유도를 하고 싶다. 내일도 유도 해야지. 매일 유도를 하고 싶다. 내일도 유도 해야지."]),
+    ]), diary: .constant(Diary(date: Date(), title: "Diary title", emoji: "❔", paragraph: ["paragraph 1", "paragraph 2"])))
 }

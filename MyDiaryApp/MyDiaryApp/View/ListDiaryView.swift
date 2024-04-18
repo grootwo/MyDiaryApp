@@ -12,7 +12,7 @@ struct ListDiaryView: View {
     var body: some View {
         ScrollView {
             ForEach($diaries, id: \.id) { $diary in
-                NavigationLink(destination: DiaryView(diary: $diary)) {
+                NavigationLink(destination: DiaryView(diaries: $diaries, diary: $diary)) {
                     VStack(alignment: .leading) {
                         HStack {
                             Text(diary.title)
