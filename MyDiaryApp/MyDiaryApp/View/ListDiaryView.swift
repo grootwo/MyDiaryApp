@@ -15,9 +15,15 @@ struct ListDiaryView: View {
                 NavigationLink(destination: DiaryView(diaries: $diaries, diary: $diary)) {
                     VStack(alignment: .leading) {
                         HStack {
-                            Text(diary.title)
-                                .font(.title2)
-                                .fontWeight(.semibold)
+                            if diary.title.count > 8 {
+                                Text("\(diary.title.prefix(8))···")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                            } else {
+                                Text(diary.title)
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                            }
                             Spacer()
                             Text(diary.date.formatted(date: .complete, time: .omitted))
                                 .font(.subheadline)
@@ -38,7 +44,6 @@ struct ListDiaryView: View {
                 }
                 .foregroundColor(.black)
             }
-            .padding(.top, 60)
         }
         .padding()
     }
